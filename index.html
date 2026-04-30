@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CargaVerde — Instalación de Cargadores para Vehículos Eléctricos en Chile</title>
+<meta name="description" content="CargaVerde instala cargadores para vehículos eléctricos en Santiago. Instalación domiciliaria certificada SEC, trámites TE-6 incluidos. Cotiza gratis en 24h.">
+<meta name="geo.region" content="CL">
+<meta name="geo.placename" content="Santiago, Chile">
+<link rel="canonical" href="https://cargaverde.cl">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CargaVerde — Cargadores VE en Chile">
+<meta property="og:description" content="Instalación certificada SEC de cargadores eléctricos en Santiago. Cotiza gratis.">
+<meta property="og:url" content="https://cargaverde.cl">
+<meta property="og:image" content="https://cargaverde.cl/og-image.jpg">
+<meta property="og:locale" content="es_CL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CargaVerde — Instala tu cargador VE en 48 horas">
+<meta name="twitter:description" content="Instalamos cargadores para vehículos eléctricos en Chile. Certificados SEC, trámites incluidos. Cotiza gratis en 24h.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --verde: #0F6E56;
+    --verde-claro: #1D9E75;
+    --verde-suave: #E1F5EE;
+    --verde-medio: #9FE1CB;
+    --oscuro: #0D1F1A;
+    --carbón: #1C2E28;
+    --gris: #3D4F4A;
+    --gris-claro: #F0F5F3;
+    --blanco: #FFFFFF;
+    --acento: #EFCF56;
+    --acento-oscuro: #BA7517;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--blanco);
+    color: var(--oscuro);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Syne', 'Trebuchet MS', 'Arial Black', sans-serif;
+    line-height: 1.15;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    height: 64px;
+    background: rgba(13, 31, 26, 0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(29, 158, 117, 0.2);
+  }
+
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--blanco);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .logo-bolt {
+    width: 28px;
+    height: 28px;
+    background: var(--verde-claro);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--blanco);
+  }
+
+  .logo span { color: var(--verde-medio); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--verde-medio); }
+
+  .nav-cta {
+    background: var(--verde-claro) !important;
+    color: var(--blanco) !important;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 500 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--verde) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--oscuro);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 100px 5vw 60px;
+    gap: 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(29,158,117,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(29,158,117,0.15);
+    border: 1px solid rgba(29,158,117,0.4);
+    color: var(--verde-medio);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-weight: 800;
+    color: var(--blanco);
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: #5DCAA5;
+  }
+
+  .hero p {
+    color: rgba(255,255,255,0.65);
+    font-size: 1.1rem;
+    font-weight: 300;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .btn-primary {
+    background: #0F6E56;
+    color: var(--blanco);
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: #085041; transform: translateY(-1px); }
+
+  .btn-secondary {
+    background: transparent;
+    color: rgba(255,255,255,0.8);
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    display: inline-block;
+  }
+
+  .btn-secondary:hover { border-color: var(--verde-medio); color: var(--verde-medio); }
+
+  .hero-trust {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .trust-item {
+    text-align: center;
+  }
+
+  .trust-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--verde-claro);
+  }
+
+  .trust-label {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.5);
+    margin-top: 2px;
+  }
+
+  /* Hero visual */
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .ev-mockup {
+    width: 100%;
+    max-width: 420px;
+    background: var(--carbón);
+    border-radius: 20px;
+    border: 1px solid rgba(29,158,117,0.3);
+    padding: 2rem;
+    position: relative;
+  }
+
+  .ev-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+
+  .ev-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.85rem;
+    color: var(--verde-medio);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .ev-status {
+    background: rgba(29,158,117,0.2);
+    color: var(--verde-claro);
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 100px;
+    border: 1px solid rgba(29,158,117,0.4);
+  }
+
+  .charge-ring {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 1.5rem;
+    position: relative;
+  }
+
+  .charge-ring svg { width: 100%; height: 100%; }
+
+  .charge-percent {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+
+  .charge-percent .num {
+    font-family: 'Syne', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--blanco);
+  }
+
+  .charge-percent .unit {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .ev-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 1.2rem;
+  }
+
+  .ev-stat {
+    background: rgba(255,255,255,0.04);
+    border-radius: 8px;
+    padding: 10px 8px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .ev-stat-val {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--blanco);
+  }
+
+  .ev-stat-lbl {
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.4);
+    margin-top: 2px;
+  }
+
+  .ev-bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 6px;
+  }
+
+  .ev-bar-track {
+    height: 6px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .ev-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--verde) 0%, var(--verde-claro) 100%);
+    border-radius: 3px;
+    width: 72%;
+    animation: fillBar 1.8s ease-out forwards;
+  }
+
+  @keyframes fillBar { from { width: 0%; } to { width: 72%; } }
+
+  /* ── PROBLEMAS ── */
+  .section-pain {
+    background: var(--gris-claro);
+    padding: 90px 5vw;
+    text-align: center;
+  }
+
+  .section-label {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--verde-claro);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 800;
+    color: var(--oscuro);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  .section-sub {
+    font-size: 1.05rem;
+    color: var(--gris);
+    max-width: 560px;
+    margin: 0 auto 3.5rem;
+    font-weight: 300;
+  }
+
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .pain-card {
+    background: var(--blanco);
+    border-radius: 14px;
+    padding: 1.8rem 1.5rem;
+    border: 1px solid rgba(0,0,0,0.06);
+    text-align: left;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .pain-card:hover { border-color: var(--verde-claro); transform: translateY(-3px); }
+
+  .pain-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--verde-suave);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .pain-card h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--oscuro);
+    margin-bottom: 0.5rem;
+  }
+
+  .pain-card p {
+    font-size: 0.88rem;
+    color: var(--gris);
+    line-height: 1.6;
+  }
+
+  /* ── PASOS / PROCESO ── */
+  .section-process {
+    padding: 100px 5vw;
+    background: var(--blanco);
+  }
+
+  .process-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .process-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0;
+    position: relative;
+  }
+
+  .steps-grid::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: var(--verde-suave);
+    z-index: 0;
+  }
+
+  .step-item {
+    text-align: center;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-num {
+    width: 64px;
+    height: 64px;
+    background: var(--oscuro);
+    color: var(--verde-claro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 0 auto 1.2rem;
+    border: 3px solid var(--verde-suave);
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .step-item:hover .step-num {
+    background: var(--verde-claro);
+    color: var(--blanco);
+    border-color: var(--verde-claro);
+  }
+
+  .step-item h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--oscuro);
+    margin-bottom: 0.5rem;
+  }
+
+  .step-item p {
+    font-size: 0.83rem;
+    color: var(--gris);
+    line-height: 1.5;
+  }
+
+  /* ── SERVICIOS ── */
+  .section-services {
+    background: var(--oscuro);
+    padding: 100px 5vw;
+  }
+
+  .services-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .services-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .services-header .section-title { color: var(--blanco); }
+  .services-header .section-sub { color: rgba(255,255,255,0.5); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    background: var(--carbón);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(29,158,117,0.15);
+    transition: border-color 0.2s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--verde-claro);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: left;
+  }
+
+  .service-card:hover { border-color: rgba(29,158,117,0.5); transform: translateY(-4px); }
+  .service-card:hover::before { transform: scaleX(1); }
+
+  .service-card.featured {
+    border-color: rgba(29,158,117,0.6);
+    background: rgba(29,158,117,0.08);
+  }
+
+  .service-card.featured::before { transform: scaleX(1); }
+
+  .service-badge {
+    display: inline-block;
+    background: rgba(239,207,86,0.15);
+    color: var(--acento);
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 100px;
+    border: 1px solid rgba(239,207,86,0.3);
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .service-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .service-card h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--blanco);
+    margin-bottom: 0.7rem;
+  }
+
+  .service-card p {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+    margin-bottom: 1.3rem;
+  }
+
+  .service-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .service-features li {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.6);
+    padding-left: 18px;
+    position: relative;
+  }
+
+  .service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--verde-claro);
+    font-weight: 700;
+  }
+
+  /* ── CALCULADORA ── */
+  .section-calc {
+    padding: 100px 5vw;
+    background: var(--gris-claro);
+  }
+
+  .calc-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .calc-box {
+    background: var(--blanco);
+    border-radius: 20px;
+    padding: 3rem;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+  }
+
+  .calc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--oscuro);
+    font-family: 'Syne', sans-serif;
+  }
+
+  .form-group select,
+  .form-group input[type="number"],
+  .form-group input[type="range"] {
+    padding: 10px 14px;
+    border: 1.5px solid #E0E8E5;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    color: var(--oscuro);
+    background: var(--blanco);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-group select:focus,
+  .form-group input:focus { border-color: var(--verde-claro); }
+
+  .calc-result {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--verde-suave);
+    border-radius: 12px;
+    border: 1px solid rgba(29,158,117,0.3);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .result-item .val {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--verde);
+  }
+
+  .result-item .lbl {
+    font-size: 0.78rem;
+    color: var(--gris);
+    margin-top: 3px;
+  }
+
+  .calc-cta {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  /* ── TESTIMONIOS ── */
+  .section-social {
+    padding: 100px 5vw;
+    background: var(--blanco);
+  }
+
+  .testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .testimonial-card {
+    background: var(--gris-claro);
+    border-radius: 16px;
+    padding: 1.8rem;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+  }
+
+  .testimonial-card:hover { transform: translateY(-3px); }
+
+  .stars {
+    color: var(--acento-oscuro);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .testimonial-card blockquote {
+    font-size: 0.92rem;
+    color: var(--gris);
+    line-height: 1.65;
+    margin-bottom: 1.3rem;
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  .avatar.verde { background: var(--verde-suave); color: var(--verde); }
+  .avatar.azul { background: #E6F1FB; color: #185FA5; }
+  .avatar.naranja { background: #FAEEDA; color: #BA7517; }
+
+  .author-info .name {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--oscuro);
+  }
+
+  .author-info .role {
+    font-size: 0.75rem;
+    color: var(--gris);
+  }
+
+  /* ── FORMULARIO LEAD / CTA ── */
+  .section-cta {
+    background: var(--oscuro);
+    padding: 100px 5vw;
+  }
+
+  .cta-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .cta-inner .section-title { color: var(--blanco); margin-bottom: 0.7rem; }
+  .cta-inner .section-sub { color: rgba(255,255,255,0.5); margin-bottom: 2.5rem; }
+
+  .lead-form {
+    background: var(--carbón);
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid rgba(29,158,117,0.25);
+    text-align: left;
+  }
+
+  .lead-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .lead-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .lead-field.full { grid-column: 1 / -1; }
+
+  .lead-field label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.65);
+    font-family: 'Syne', sans-serif;
+  }
+
+  .lead-field input,
+  .lead-field select,
+  .lead-field textarea {
+    padding: 11px 14px;
+    border: 1.5px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--blanco);
+    background: rgba(255,255,255,0.05);
+    outline: none;
+    transition: border-color 0.2s;
+    resize: vertical;
+  }
+
+  .lead-field input:focus,
+  .lead-field select:focus,
+  .lead-field textarea:focus { border-color: var(--verde-claro); }
+
+  .lead-field select option { background: var(--carbón); }
+
+  .lead-submit {
+    width: 100%;
+    padding: 15px;
+    background: var(--verde-claro);
+    color: var(--blanco);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Syne', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 0.5rem;
+  }
+
+  .lead-submit:hover { background: var(--verde); transform: translateY(-1px); }
+  .lead-submit:active { transform: scale(0.99); }
+
+  .form-disclaimer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
+    margin-top: 1rem;
+  }
+
+  /* Success message */
+  .success-msg {
+    display: none;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+
+  .success-msg .icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(29,158,117,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem;
+    font-size: 1.8rem;
+  }
+
+  .success-msg h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.4rem;
+    color: var(--blanco);
+    margin-bottom: 0.6rem;
+  }
+
+  .success-msg p { color: rgba(255,255,255,0.55); font-size: 0.9rem; }
+
+  /* ── FAQ ── */
+  .section-faq {
+    padding: 100px 5vw;
+    background: var(--gris-claro);
+  }
+
+  .faq-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 3rem;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--oscuro);
+    transition: color 0.2s;
+    gap: 1rem;
+  }
+
+  .faq-q:hover { color: var(--verde-claro); }
+
+  .faq-arrow {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: var(--verde-suave);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    color: var(--verde-claro);
+    transition: transform 0.3s, background 0.2s;
+  }
+
+  .faq-item.open .faq-arrow { transform: rotate(180deg); background: var(--verde-claro); color: var(--blanco); }
+
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.25s;
+    font-size: 0.9rem;
+    color: var(--gris);
+    line-height: 1.7;
+  }
+
+  .faq-item.open .faq-a {
+    max-height: 300px;
+    padding-bottom: 1.2rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--oscuro);
+    padding: 50px 5vw 30px;
+    border-top: 1px solid rgba(29,158,117,0.15);
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.7;
+    margin-top: 0.8rem;
+    max-width: 280px;
+  }
+
+  .footer-col h5 {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-col ul a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+
+  .footer-col ul a:hover { color: var(--verde-medio); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-bottom p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.25);
+  }
+
+  .sec-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(29,158,117,0.1);
+    border: 1px solid rgba(29,158,117,0.25);
+    color: var(--verde-medio);
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+
+  /* ── SCROLL ANIMATIONS ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    /* Hero */
+    .hero {
+      grid-template-columns: 1fr;
+      padding-top: 72px;
+    }
+
+    .hero h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
+
+    .hero-visual { display: none; }
+    .hero-trust { gap: 1.2rem; }
+
+    /* Nav */
+    .nav-links { display: none; }
+
+    /* Pain points */
+    .pain-grid { gap: 0.75rem; }
+    .section-pain { padding-bottom: 63px; }
+
+    /* Process steps */
+    .step-item { margin-bottom: 2rem; }
+    .steps-grid::before { display: none; }
+
+    /* Calculator */
+    .calc-grid { grid-template-columns: 1fr; }
+    .calc-result { grid-template-columns: 1fr; }
+    .result-item .val { font-size: 2rem; }
+    .result-item:last-child .val { font-size: 1.5rem; }
+
+    /* Lead form / CTA */
+    .section-cta { padding-top: 3rem; }
+    .lead-form { padding: 1.25rem; }
+    .lead-grid { grid-template-columns: 1fr; }
+    .lead-field input,
+    .lead-field select,
+    .lead-field textarea { font-size: 16px; }
+    .form-group select,
+    .form-group input[type="number"],
+    .form-group input[type="range"] { font-size: 16px; }
+
+    /* Buttons — táctil mínimo 48px */
+    .btn-primary,
+    .btn-secondary,
+    .lead-submit,
+    .nav-cta { min-height: 48px; }
+
+    /* Layout */
+    .footer-top { grid-template-columns: 1fr; }
+    .services-header { text-align: center; }
+
+    /* WhatsApp flotante */
+    .whatsapp-float { bottom: 1.2rem; right: 1.2rem; }
+  }
+
+  /* Floating WhatsApp */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 200;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+  }
+
+  .whatsapp-float svg { width: 28px; height: 28px; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-bolt">⚡</div>
+    Carga<span>Verde</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#proceso">Cómo funciona</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#calculadora">Calculadora</a></li>
+    <li><a href="#contacto" class="nav-cta">Cotizar ahora</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">⚡ Instaladores certificados SEC</div>
+    <h1>Instala tu cargador VE en <em>48 horas</em></h1>
+    <p>Somos especialistas en la instalación de cargadores para vehículos eléctricos. Te guiamos desde la evaluación técnica hasta el cargador listo para usar.</p>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn-primary">Cotizar gratis →</a>
+      <a href="#proceso" class="btn-secondary">Ver proceso</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item">
+        <div class="trust-num">+340</div>
+        <div class="trust-label">Cargadores instalados</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-num">48h</div>
+        <div class="trust-label">Plazo promedio</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-num">100%</div>
+        <div class="trust-label">Certificados SEC</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard mockup -->
+  <div class="hero-visual">
+    <div class="ev-mockup">
+      <div class="ev-header">
+        <span class="ev-title">Mi Cargador</span>
+        <span class="ev-status">● Cargando</span>
+      </div>
+      <div class="charge-ring">
+        <svg viewBox="0 0 140 140">
+          <circle cx="70" cy="70" r="56" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="10"/>
+          <circle cx="70" cy="70" r="56" fill="none" stroke="#1D9E75" stroke-width="10"
+            stroke-dasharray="352" stroke-dashoffset="98"
+            stroke-linecap="round"
+            transform="rotate(-90 70 70)"
+            style="transition: stroke-dashoffset 1s ease;"/>
+        </svg>
+        <div class="charge-percent">
+          <div class="num">72%</div>
+          <div class="unit">SoC</div>
+        </div>
+      </div>
+      <div class="ev-stats">
+        <div class="ev-stat">
+          <div class="ev-stat-val">7.4</div>
+          <div class="ev-stat-lbl">kW</div>
+        </div>
+        <div class="ev-stat">
+          <div class="ev-stat-val">2h 10m</div>
+          <div class="ev-stat-lbl">Restante</div>
+        </div>
+        <div class="ev-stat">
+          <div class="ev-stat-val">245</div>
+          <div class="ev-stat-lbl">km rango</div>
+        </div>
+      </div>
+      <div class="ev-bar-label">
+        <span>Potencia usada hoy</span>
+        <span>14.8 / 20 kWh</span>
+      </div>
+      <div class="ev-bar-track"><div class="ev-bar-fill"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMAS -->
+<section class="section-pain">
+  <div class="section-label">¿Te pasa esto?</div>
+  <h2 class="section-title">Instalar un cargador no debería ser un laberinto</h2>
+  <p class="section-sub">Muchos propietarios de VE enfrentan los mismos obstáculos antes de poder cargar en casa.</p>
+  <div class="pain-grid">
+    <div class="pain-card reveal">
+      <div class="pain-icon">🔌</div>
+      <h4>No sabes qué cargador necesitas</h4>
+      <p>Modo 2, Modo 3, Modo 4, Wallbox, Tótem… demasiadas opciones sin orientación clara.</p>
+    </div>
+    <div class="pain-card reveal reveal-delay-1">
+      <div class="pain-icon">⚡</div>
+      <h4>Dudas sobre el empalme eléctrico</h4>
+      <p>¿Tu instalación soporta la potencia? ¿Necesitas ampliar o solicitar uno nuevo?</p>
+    </div>
+    <div class="pain-card reveal reveal-delay-2">
+      <div class="pain-icon">📋</div>
+      <h4>Trámites confusos ante SEC</h4>
+      <p>El TE-6, la Norma Técnica, el Pliego N°15… la burocracia paraliza el proyecto.</p>
+    </div>
+    <div class="pain-card reveal reveal-delay-3">
+      <div class="pain-icon">🏗️</div>
+      <h4>Costos inesperados en la obra</h4>
+      <p>Sin una evaluación previa, los imprevistos de instalación pueden multiplicar el presupuesto.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="section-process" id="proceso">
+  <div class="process-inner">
+    <div class="process-header">
+      <div class="section-label">Nuestro proceso</div>
+      <h2 class="section-title">De la consulta al cargador funcionando</h2>
+      <p class="section-sub">Gestionamos todo el proceso según la normativa vigente.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-item reveal">
+        <div class="step-num">1</div>
+        <h4>Asesoría técnica</h4>
+        <p>Evaluamos tu vehículo, uso diario y empalme eléctrico para definir la potencia óptima.</p>
+      </div>
+      <div class="step-item reveal reveal-delay-1">
+        <div class="step-num">2</div>
+        <h4>Selección del cargador</h4>
+        <p>Recomendamos el cargador compatible con tu VE y modo de carga adecuado.</p>
+      </div>
+      <div class="step-item reveal reveal-delay-2">
+        <div class="step-num">3</div>
+        <h4>Trámites SEC</h4>
+        <p>Gestionamos el TE-6, la inscripción en SEC y la coordinación con la distribuidora.</p>
+      </div>
+      <div class="step-item reveal reveal-delay-3">
+        <div class="step-num">4</div>
+        <h4>Instalación certificada</h4>
+        <p>Instaladores SEC ejecutan la obra según Pliego N°15 y norma técnica vigente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="section-services" id="servicios">
+  <div class="services-inner">
+    <div class="services-header">
+      <div class="section-label">Servicios</div>
+      <h2 class="section-title">Una solución para cada necesidad</h2>
+      <p class="section-sub">Desde hogares hasta flotas empresariales.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-icon">🏠</span>
+        <h3>Hogar residencial</h3>
+        <p>Cargador Wallbox o toma industrial para cargar tu VE cómodamente en casa o edificio.</p>
+        <ul class="service-features">
+          <li>Evaluación de empalme incluida</li>
+          <li>Modo 2 y Modo 3 disponibles</li>
+          <li>Trámites TE-6 incluidos</li>
+          <li>Garantía de instalación 2 años</li>
+        </ul>
+      </div>
+      <div class="service-card featured reveal reveal-delay-1">
+        <div class="service-badge">Más popular</div>
+        <span class="service-icon">🏢</span>
+        <h3>Empresa y edificios</h3>
+        <p>Solución multiusuario con gestión de carga inteligente para estacionamientos corporativos.</p>
+        <ul class="service-features">
+          <li>Sistema de gestión de carga</li>
+          <li>Múltiples puntos simultáneos</li>
+          <li>Facturación por usuario</li>
+          <li>Monitoreo remoto en tiempo real</li>
+        </ul>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <span class="service-icon">🚐</span>
+        <h3>Flotas eléctricas</h3>
+        <p>Infraestructura de carga diseñada para flotas de vehículos eléctricos comerciales.</p>
+        <ul class="service-features">
+          <li>Cargadores Modo 3 y Modo 4</li>
+          <li>Optimización de horarios de carga</li>
+          <li>Integración con software de flota</li>
+          <li>Soporte técnico prioritario</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULADORA -->
+<section class="section-calc" id="calculadora">
+  <div class="calc-inner">
+    <div style="text-align:center; margin-bottom: 2.5rem;">
+      <div class="section-label">Herramienta</div>
+      <h2 class="section-title">Estima la potencia que necesitas</h2>
+      <p class="section-sub">Ingresa tus datos y te indicamos el cargador adecuado.</p>
+    </div>
+    <div class="calc-box">
+      <div class="calc-grid">
+        <div class="form-group">
+          <label>Tipo de vehículo eléctrico</label>
+          <select id="tipoVE" onchange="calcular()">
+            <option value="6.5">Sedán compacto (ej. Ora, BYD Atto)</option>
+            <option value="5.5">Hatchback (ej. Mini Cooper SE)</option>
+            <option value="7.0">SUV eléctrico (ej. BYD Tang, Tesla MY)</option>
+            <option value="8.5">Pickup eléctrica (ej. Ford F-150 Lightning)</option>
+            <option value="2.5">Moto eléctrica</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Actividad diaria (km/día): <strong id="kmLabel">80 km</strong></label>
+          <input type="range" id="kmDia" min="20" max="300" value="80" step="10" oninput="calcular()">
+        </div>
+        <div class="form-group">
+          <label>Horas disponibles para carga</label>
+          <select id="horasCarga" onchange="calcular()">
+            <option value="8">8 horas (nocturna)</option>
+            <option value="6" selected>6 horas</option>
+            <option value="4">4 horas</option>
+            <option value="2">2 horas (carga rápida)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Empalme actual disponible</label>
+          <select id="empalme">
+            <option value="10">10 kW (monofásico básico)</option>
+            <option value="15" selected>15 kW (estándar)</option>
+            <option value="25">25 kW (reforzado)</option>
+            <option value="0">Sin empalme / no sé</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="calc-result" id="calcResult">
+        <div class="result-item">
+          <div class="val" id="resKwh">—</div>
+          <div class="lbl">kWh recorrido diario</div>
+        </div>
+        <div class="result-item">
+          <div class="val" id="resPotencia">—</div>
+          <div class="lbl">Potencia mínima cargador</div>
+        </div>
+        <div class="result-item">
+          <div class="val" id="resTipo">—</div>
+          <div class="lbl">Tipo de cargador sugerido</div>
+        </div>
+      </div>
+
+      <div class="calc-cta">
+        <a href="#contacto" class="btn-primary">Recibir cotización personalizada →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="section-social">
+  <div style="text-align:center; margin-bottom: 3rem;">
+    <div class="section-label">Clientes satisfechos</div>
+    <h2 class="section-title">Lo que dicen quienes ya cargaron con nosotros</h2>
+  </div>
+  <div class="testimonios-grid">
+    <div class="testimonial-card reveal">
+      <div class="stars">★★★★★</div>
+      <blockquote>"En menos de una semana tuve mi Wallbox instalado y funcionando. Gestionaron todos los trámites de SEC, yo no tuve que hacer nada."</blockquote>
+      <div class="testimonial-author">
+        <div class="avatar verde">AR</div>
+        <div class="author-info">
+          <div class="name">Andrés Rojas</div>
+          <div class="role">Propietario BYD Atto 3 · Las Condes</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-1">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Instalaron 12 cargadores en nuestro edificio corporativo con un sistema de gestión de carga excelente. El proceso fue impecable."</blockquote>
+      <div class="testimonial-author">
+        <div class="avatar azul">MC</div>
+        <div class="author-info">
+          <div class="name">María Contreras</div>
+          <div class="role">Gerente de Facilities · Empresa retail</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-2">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Tenía miedo de la burocracia con SEC. CargaVerde lo manejó todo. En 10 días tenía el empalme nuevo y el cargador funcionando."</blockquote>
+      <div class="testimonial-author">
+        <div class="avatar naranja">JP</div>
+        <div class="author-info">
+          <div class="name">Jorge Pacheco</div>
+          <div class="role">Propietario Tesla Model Y · Vitacura</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / FORMULARIO LEAD -->
+<section class="section-cta" id="contacto">
+  <div class="cta-inner">
+    <div class="section-label">Cotización gratuita</div>
+    <h2 class="section-title">¿Listo para instalar tu cargador?</h2>
+    <p class="section-sub">Completa el formulario y un especialista certificado SEC te contactará en menos de 2 horas hábiles.</p>
+
+    <div class="lead-form" id="leadForm">
+      <div class="lead-grid">
+        <div class="lead-field">
+          <label>Nombre completo</label>
+          <input type="text" id="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="lead-field">
+          <label>Teléfono / WhatsApp</label>
+          <input type="tel" id="telefono" placeholder="+56 9 1234 5678">
+        </div>
+        <div class="lead-field full">
+          <label>Correo electrónico</label>
+          <input type="email" id="email" placeholder="correo@ejemplo.cl" required>
+        </div>
+        <div class="lead-field">
+          <label>Tipo de vehículo eléctrico</label>
+          <input type="text" id="vehiculo" placeholder="Ej: BYD Atto 3, Tesla Model 3">
+        </div>
+        <div class="lead-field">
+          <label>Tipo de instalación</label>
+          <select id="tipoInstalacion">
+            <option>Casa particular</option>
+            <option>Departamento / edificio</option>
+            <option>Empresa / oficina</option>
+            <option>Flota comercial</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="lead-field full">
+          <label>¿Tienes alguna consulta específica? (opcional)</label>
+          <textarea id="consulta" rows="3" placeholder="Cuéntanos sobre tu situación actual…"></textarea>
+        </div>
+      </div>
+      <button class="lead-submit" onclick="enviarFormulario()">Solicitar cotización gratuita →</button>
+      <p class="form-disclaimer">Sin compromiso. Te respondemos en menos de 2 horas hábiles.</p>
+    </div>
+
+    <div class="success-msg" id="successMsg">
+      <div class="icon">✅</div>
+      <h3>¡Recibimos tu solicitud!</h3>
+      <p>Un especialista CargaVerde te contactará muy pronto para coordinar una visita técnica gratuita.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-faq">
+  <div class="faq-inner">
+    <div style="text-align:center; margin-bottom: 0;">
+      <div class="section-label">Preguntas frecuentes</div>
+      <h2 class="section-title">Todo lo que necesitas saber</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿Qué es el trámite TE-6 y por qué es obligatorio?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          El Trámite Eléctrico 6 (TE-6) es la declaración obligatoria de puesta en servicio de instalaciones para carga de vehículos eléctricos ante la SEC. Nosotros gestionamos este trámite por ti, incluyendo la información técnica, acceso (público o privado), modos de carga habilitados y lugar de emplazamiento.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿Cuánto demora instalar un cargador en mi casa?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          Si tu empalme actual soporta la potencia del cargador, el proceso puede tomar entre 2 a 5 días hábiles. Si es necesario ampliar el empalme o solicitar uno nuevo, la empresa distribuidora tiene entre 10 y 90 días hábiles de plazo según la normativa vigente. Gestionamos todo para minimizar los tiempos.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿Qué diferencia hay entre Modo 2, Modo 3 y Modo 4?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          Modo 2 usa un enchufe doméstico o industrial (2.2 a 11 kW), ideal para bajo uso (menos de 30 km/día). Es el más económico pero el más lento. Modo 3 usa cargadores tipo Wallbox o Tótem (3.5 a 50 kW), es el estándar para carga en casa o empresa. Modo 4 es carga rápida en corriente continua (DC), desde 44 kW, usado en estaciones públicas o flotas con alta exigencia.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿Qué pasa si mi empalme no tiene suficiente potencia?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          Tienes tres opciones: solicitar un empalme nuevo exclusivo para el cargador, ampliar la capacidad del empalme existente, o instalar un sistema de gestión de carga inteligente que distribuye la potencia disponible para no saturar el empalme. Evaluamos cuál es la mejor opción para tu caso.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ¿Pueden instalar cargadores en edificios con copropiedad?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          Sí. La normativa vigente permite solicitar un empalme para el cargador del vehículo eléctrico en estacionamientos de edificios. Asesoramos en los procesos de aprobación de la copropiedad y gestionamos todos los trámites técnicos y eléctricos.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="logo" style="margin-bottom: 0.8rem; display: inline-flex;">
+        <div class="logo-bolt">⚡</div>
+        Carga<span>Verde</span>
+      </a>
+      <p>Especialistas en instalación certificada de cargadores para vehículos eléctricos. Hacemos la electromovilidad accesible para todos.</p>
+      <div class="sec-badge" style="margin-top: 1rem;">
+        ✓ Instaladores autorizados SEC
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Servicios</h5>
+      <ul>
+        <li><a href="#">Hogar residencial</a></li>
+        <li><a href="#">Empresas y edificios</a></li>
+        <li><a href="#">Flotas eléctricas</a></li>
+        <li><a href="#">Mantenimiento</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contacto</h5>
+      <ul>
+        <li><a href="tel:+56922580113">+56 9 22580 113</a></li>
+        <!--<li><a href="mailto:"></a></li>-->
+        <li><a href="#">Santiago, Chile</a></li>
+        <li><a href="#contacto">Agendar visita técnica</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 CargaVerde SpA · Todos los derechos reservados</p>
+    <p>Instalaciones según Pliego Técnico N°15 · Norma Técnica SEC</p>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/56922580113?text=Hola%2C%20quiero%20cotizar%20la%20instalación%20de%20un%20cargador%20para%20mi%20VE" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chatear por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "CargaVerde",
+  "description": "Especialistas en instalación certificada de cargadores para vehículos eléctricos en Chile",
+  "url": "https://cargaverde.cl",
+  "telephone": "+56922580113",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Santiago",
+    "addressRegion": "Región Metropolitana",
+    "addressCountry": "CL"
+  },
+  "areaServed": "CL",
+  "serviceType": "Instalación de cargadores para vehículos eléctricos"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es el trámite TE-6 y por qué es obligatorio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El Trámite Eléctrico 6 (TE-6) es la declaración obligatoria de puesta en servicio de instalaciones para carga de vehículos eléctricos ante la SEC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto demora instalar un cargador en mi casa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si tu empalme actual soporta la potencia del cargador, el proceso puede tomar entre 2 a 5 días hábiles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué diferencia hay entre Modo 2, Modo 3 y Modo 4?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Modo 2 usa enchufe doméstico o industrial (2.2 a 11 kW). Modo 3 usa cargadores tipo Wallbox o Tótem (3.5 a 50 kW). Modo 4 es carga rápida DC desde 44 kW."
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+  // Calculadora de potencia
+  function calcular() {
+    const rendimiento = parseFloat(document.getElementById('tipoVE').value);
+    const km = parseInt(document.getElementById('kmDia').value);
+    const horas = parseInt(document.getElementById('horasCarga').value);
+
+    document.getElementById('kmLabel').textContent = km + ' km';
+
+    const kwh = (km / rendimiento).toFixed(1);
+    const potencia = ((kwh * 1.2) / horas).toFixed(1);
+
+    let tipo;
+    const p = parseFloat(potencia);
+    if (p <= 2.2) tipo = 'Enchufe doméstico';
+    else if (p <= 11) tipo = 'Wallbox Modo 3';
+    else if (p <= 50) tipo = 'Tótem Modo 3';
+    else tipo = 'Carga rápida DC';
+
+    document.getElementById('resKwh').textContent = kwh + ' kWh';
+    document.getElementById('resPotencia').textContent = potencia + ' kW';
+    document.getElementById('resTipo').textContent = tipo;
+  }
+
+  calcular();
+
+  // FAQ toggle
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Formulario lead
+  async function enviarFormulario() {
+    const nombre = document.getElementById('nombre').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const telefono = document.getElementById('telefono').value.trim();
+    const vehiculo = document.getElementById('vehiculo').value.trim();
+    const tipoInstalacion = document.getElementById('tipoInstalacion').value;
+    const consulta = document.getElementById('consulta').value.trim();
+
+    if (!nombre || !email) {
+      alert('Por favor, completa al menos tu nombre y correo electrónico.');
+      return;
+    }
+
+    const btn = document.querySelector('.lead-submit');
+    btn.textContent = 'Enviando…';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch('https://formspree.io/f/mdawybyq', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ nombre, email, telefono, vehiculo, tipoInstalacion, consulta })
+      });
+
+      if (res.ok) {
+        document.getElementById('leadForm').style.display = 'none';
+        document.getElementById('successMsg').style.display = 'block';
+      } else {
+        throw new Error('Error en el envío');
+      }
+    } catch (e) {
+      btn.textContent = 'Solicitar cotización gratuita →';
+      btn.disabled = false;
+      alert('Hubo un problema al enviar. Por favor intenta nuevamente o escríbenos por WhatsApp.');
+    }
+  }
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
