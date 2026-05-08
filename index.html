@@ -1079,6 +1079,46 @@
   .reveal-delay-3 { transition-delay: 0.3s; }
   .reveal-delay-4 { transition-delay: 0.4s; }
 
+  /* ── NUESTRA HISTORIA ── */
+  .section-historia {
+    background: var(--blanco);
+    padding: 5rem 1.5rem;
+  }
+  .historia-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .historia-img {
+    display: flex;
+    justify-content: center;
+  }
+  .historia-foto {
+    width: 100%;
+    max-width: 460px;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(15,110,86,0.18);
+    display: block;
+    object-fit: cover;
+  }
+  .historia-texto .section-title {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  .historia-cita {
+    font-size: 1.15rem;
+    color: var(--gris);
+    line-height: 1.75;
+    font-family: 'DM Sans', sans-serif;
+    border-left: 3px solid var(--verde-claro);
+    padding-left: 1.25rem;
+    margin-top: 1rem;
+    font-style: italic;
+  }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     /* Hero */
@@ -1125,6 +1165,12 @@
     .btn-secondary,
     .lead-submit,
     .nav-cta { min-height: 48px; }
+
+    /* Historia */
+    .historia-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .historia-foto { max-width: 100%; }
+    .historia-texto .section-title { text-align: center; }
+    .historia-texto .section-label { text-align: center; }
 
     /* Layout */
     .footer-top { grid-template-columns: 1fr; }
@@ -1417,6 +1463,20 @@
       <div class="calc-cta">
         <a href="#contacto" class="btn-primary">Recibir cotización personalizada →</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUESTRA HISTORIA -->
+<section class="section-historia" id="historia">
+  <div class="historia-inner">
+    <div class="historia-img reveal">
+      <img src="img_sofofa.jpg" alt="Fundador de Carga Verde" class="historia-foto">
+    </div>
+    <div class="historia-texto reveal reveal-delay-1">
+      <div class="section-label">Nuestra Historia</div>
+      <h2 class="section-title">Desde 2017 impulsando la electromovilidad en Chile.</h2>
+      <p class="historia-cita">Lo que entonces era una visión, hoy es Carga Verde.</p>
     </div>
   </div>
 </section>
