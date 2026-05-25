@@ -1758,31 +1758,8 @@
 }
 </script>
 
+<script src="calculadora_obfuscator.js"></script>
 <script>
-  // Calculadora de potencia
-  function calcular() {
-    const rendimiento = parseFloat(document.getElementById('tipoVE').value);
-    const km = parseInt(document.getElementById('kmDia').value);
-    const horas = parseInt(document.getElementById('horasCarga').value);
-
-    document.getElementById('kmLabel').textContent = km + ' km';
-
-    const kwh = (km / rendimiento).toFixed(1);
-    const potencia = ((kwh * 1.2) / horas).toFixed(1);
-
-    let tipo;
-    const p = parseFloat(potencia);
-    if (p <= 2.2) tipo = 'Enchufe doméstico';
-    else if (p <= 11) tipo = 'Wallbox Modo 3';
-    else if (p <= 50) tipo = 'Tótem Modo 3';
-    else tipo = 'Carga rápida DC';
-
-    document.getElementById('resKwh').textContent = kwh + ' kWh';
-    document.getElementById('resPotencia').textContent = potencia + ' kW';
-    document.getElementById('resTipo').textContent = tipo;
-  }
-
-  calcular();
 
   // FAQ toggle
   function toggleFaq(btn) {
